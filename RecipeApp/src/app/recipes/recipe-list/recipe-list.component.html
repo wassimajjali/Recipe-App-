@@ -1,1 +1,26 @@
-<p>recipe-list works!</p>
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">New Recipe</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <a href="#" class="list-group-item clearfix"
+        *ngFor="let reicpeIterator of recipes">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading">{{reicpeIterator.name}}</h4>
+                <p class="list-group-item-text">{{reicpeIterator.description}}</p>
+            </div>
+            <span class="pull-right">
+                <img 
+                src="{{reicpeIterator.imagePath}}" 
+                alt="{{reicpeIterator.name}}"
+                class="img-responsive" 
+                sytle="max-height: 10px;">
+            </span>
+        </a>
+        <app-recipe-item></app-recipe-item>
+
+
+    </div>
+</div>
